@@ -84,7 +84,7 @@ getRasterLayerNames <- function(startDateTime, endDateTime, by, variables, dateT
 #'
 fmi_weather_stations <- function() {
   csv.file <- system.file("extdata", "weather_stations.csv", package="fmi")
-  weather.stations <- read.table(csv.file, sep=";", header=TRUE, as.is=TRUE)
+  weather.stations <- read.table(csv.file, sep=";", dec=",", header=TRUE, as.is=TRUE)
   return(weather.stations)
 }  
 
